@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 import Logo from './Logo'
 
 function Header() {
@@ -72,8 +73,10 @@ function Header() {
         variants={logoVariants}
         whileHover="hover"
       >
-        <Logo />
-        <span className="logo-text">CareCompass</span>
+        <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '12px', textDecoration: 'none' }}>
+          <Logo />
+          <span className="logo-text">CareCompass</span>
+        </Link>
       </motion.div>
       <motion.nav
         className="header-nav"
@@ -116,7 +119,7 @@ function Header() {
             initial="hidden"
             animate="visible"
           >
-            <a href="#contact" className="nav-link nav-button">TRY NOW</a>
+            <Link to="/check" className="nav-link nav-button">TRY NOW</Link>
           </motion.li>
         </ul>
       </motion.nav>

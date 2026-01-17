@@ -1,26 +1,23 @@
-import Header from './components/Header'
-import Hero from './components/Hero'
-import VideoBackground from './components/VideoBackground'
-import WhatWeDoScroll from './components/WhatWeDoScroll'
-import IntegratedPlatform from './components/IntegratedPlatform'
-import PlatformFeatures from './components/PlatformFeatures'
-import OurCompany from './components/OurCompany'
-import Footer from './components/Footer'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import HomePage from './pages/HomePage'
+import CheckPage from './pages/CheckPage'
+import ResultPage from './pages/ResultPage'
+import FindCarePage from './pages/FindCarePage'
+import TelehelpPage from './pages/TelehelpPage'
+import LearnPage from './pages/LearnPage'
 
 function App() {
   return (
-    <div className="app">
-      <VideoBackground />
-      <div className="content-wrapper">
-        <Header />
-        <Hero />
-      </div>
-      <WhatWeDoScroll />
-      <IntegratedPlatform />
-      <PlatformFeatures />
-      <OurCompany />
-      <Footer />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/check" element={<CheckPage />} />
+        <Route path="/result/:caseId" element={<ResultPage />} />
+        <Route path="/find-care" element={<FindCarePage />} />
+        <Route path="/telehelp" element={<TelehelpPage />} />
+        <Route path="/learn" element={<LearnPage />} />
+      </Routes>
+    </Router>
   )
 }
 

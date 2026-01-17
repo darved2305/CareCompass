@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 import ArrowIcon from './ArrowIcon'
 
 function Hero() {
@@ -93,20 +94,17 @@ function Hero() {
           <br />
           choose the right facility, and discover nearby verified options without the confusion.
         </motion.p>
-        <motion.a
-          href="#platform"
-          className="cta-button"
-          variants={buttonVariants}
-          whileHover="hover"
-        >
-          <span className="cta-text">START TRIAGE</span>
-          <motion.span
-            className="cta-arrow"
-            variants={arrowVariants}
-          >
-            <ArrowIcon />
-          </motion.span>
-        </motion.a>
+        <motion.div variants={buttonVariants} whileHover="hover">
+          <Link to="/check" className="cta-button">
+            <span className="cta-text">START TRIAGE</span>
+            <motion.span
+              className="cta-arrow"
+              variants={arrowVariants}
+            >
+              <ArrowIcon />
+            </motion.span>
+          </Link>
+        </motion.div>
       </motion.div>
     </main>
   )

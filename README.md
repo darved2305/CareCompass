@@ -1283,11 +1283,9 @@ For licensing inquiries, contact: [darved2305@github](https://github.com/darved2
 
 **CareCompass** — *Your Trusted Healthcare Navigation Partner*
 
-[Get Started](#-getting-started) • [Documentation](#-table-of-contents) • [Contribute](#-contributing)
-
 ---
 
-Made with ❤️ by the CareCompass Team
+Made by Darshan
 
 *Empowering communities with accessible healthcare information*
 
